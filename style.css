@@ -1,8 +1,31 @@
+@font-face {
+	font-family: 'infinite_strokebolder';
+	src: url('assets/infinite_stroke_bolder-webfont.woff2') format('woff2'),
+		 url('assets/infinite_stroke_bolder-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
-	width: 100%;
+	width: 100vw;
 	text-align: center;
 }
 iframe {
 	margin: 0 auto;
+	display: block;
+}
+
+h1 {
+	font-family: 'infinite_strokebolder';
+	font-size: 6em;
+}
+
+h2 {
+	font-family: 'infinite_strokebolder';
+	font-size: 3em;
+}
+
+
+h1 small {
 	display: block;
 }
