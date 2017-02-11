@@ -9,23 +9,43 @@
 body {
 	width: 100vw;
 	text-align: center;
+	font-family: 'Della Respira', serif;
+	font-size: 2em;
+	background: #FFFFF2;
 }
 iframe {
 	margin: 0 auto;
 	display: block;
+	max-width: 800px;
 }
 
 h1 {
 	font-family: 'infinite_strokebolder';
-	font-size: 6em;
+	font-size: 2em;
 }
 
 h2 {
 	font-family: 'infinite_strokebolder';
-	font-size: 3em;
+	font-size: 1.5em;
 }
-
 
 h1 small {
 	display: block;
+}
+
+.event {
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #003B6F;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.event:hover {
+  background: #0088ff;
+  text-decoration: none;
 }
