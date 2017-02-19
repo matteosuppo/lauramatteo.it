@@ -73,8 +73,20 @@ body {
 	text-align: center;
 	font-family: 'Della Respira', serif;
 	font-size: 2em;
-	background: #FFFFF2;
+	background: url('background.jpg');
+  /*background: black;*/
+  background-size: contain;
+  margin: 0;
 }
+
+header, section {
+  max-width: 800px;
+  margin: 0 auto;
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255, 255, 255, 1) 60%,rgba(255,255,255,0) 100%);
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%, rgba(255, 255, 255, 1) 60%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%, rgba(255, 255, 255, 1) 60%,rgba(255,255,255,0) 100%);
+}
+
 iframe {
 	margin: 0 auto;
 	display: block;
@@ -84,11 +96,20 @@ iframe {
 h1 {
 	font-family: 'infinite_strokebolder';
 	font-size: 2em;
+  padding: 5%;
+  margin: 0;
 }
 
 h2 {
 	font-family: 'infinite_strokebolder';
 	font-size: 1.5em;
+  padding: 5%;
+  margin: 0;
+}
+
+p {
+  padding: 4%;
+  margin: 0;
 }
 
 h1 small {
@@ -126,32 +147,35 @@ small {
 </head>
 
 <body>
-	<h1>Laura e Matteo <small>si sposano</small></h1>
-	<a href="https://www.youtube.com/watch?v=dB2yj4wxxUM"><img src="assets/preview.png"></a>
+  <header>
+	  <h1>Laura e Matteo <small>si sposano</small></h1>
+	  <a href="https://www.youtube.com/watch?v=dB2yj4wxxUM"><img src="assets/preview.png"></a>
+  </header>
+  <section>
+    <h2>Cerimonia</h2>
 
-	<h2>Cerimonia</h2>
+    <p>il
+      <date>15/07/2017</date> alle
+      <time>17:30</time><br>
+      a Monteriggioni<br>
+      <small>Largo di Fontebranda<br>Giardino sotto le mura</small>
+    </p>
+    <p>
+      <a class="btn" target="_blank" href="https://goo.gl/maps/bJNCb1oxFdK2"><i class="icon-map"></i>&nbsp;&nbsp;&nbsp;Mappa</a>
+      <a class="btn" target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=OTI2dWt0ZnJvbDdsczAzcmk0aDhuY2h2YzAgbWF0dGVvLnN1cHBvQG0&tmsrc=matteo.suppo%40gmail.com">
+      <i class="icon-calendar" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Aggiungi al calendario</a>
+    </p>
+  </section>
+  <section>
+    <h2>Ricevimento</h2>
 
-	<p>il
-		<date>15/07/2017</date> alle
-		<time>17:30</time><br>
-		a Monteriggioni<br>
-		<small>Largo di Fontebranda<br>Giardino sotto le mura</small>
-	</p>
-	<p>
-		<a class="btn" target="_blank" href="https://goo.gl/maps/bJNCb1oxFdK2"><i class="icon-map"></i>&nbsp;&nbsp;&nbsp;Mappa</a>
-		<a class="btn" target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=OTI2dWt0ZnJvbDdsczAzcmk0aDhuY2h2YzAgbWF0dGVvLnN1cHBvQG0&tmsrc=matteo.suppo%40gmail.com">
-		<i class="icon-calendar" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Aggiungi al calendario</a>
-	</p>
-
-	<h2>Ricevimento</h2>
-
-	<p>il 15/07/2017 alle 19:00<br>
-	alla Taverna di Bibbiano<br>
-	<small>Loc. Bibbiano la Taverna, 35<br>
-	53034 Colle di Val d'Elsa (Siena)</small></p>
-	<p>
-		<a class="btn" target="_blank" href="https://goo.gl/maps/KLBXCbikyB42"><i class="icon-map" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Mappa</a>
-	</p>
-
+    <p>il 15/07/2017 alle 19:00<br>
+    alla Taverna di Bibbiano<br>
+    <small>Loc. Bibbiano la Taverna, 35<br>
+    53034 Colle di Val d'Elsa (Siena)</small></p>
+    <p>
+      <a class="btn" target="_blank" href="https://goo.gl/maps/KLBXCbikyB42"><i class="icon-map" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Mappa</a>
+    </p>
+  </section>
 </body>
 </html>
