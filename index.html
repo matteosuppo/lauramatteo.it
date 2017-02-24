@@ -69,7 +69,6 @@
 .icon-map:before { content: '\f279'; } /* '' */
 
 body {
-	width: 100vw;
 	text-align: center;
 	font-family: 'Della Respira', serif;
 	font-size: 2em;
@@ -193,7 +192,24 @@ small {
   text-decoration: none;
 }
 
+.separator {
+  display: flex;
+  order: 4;
+  background: url('assets/separator.jpg');
+  background-repeat: repeat-x;
+  /*border-top: 5px solid #4f7ef2;
+  border-bottom: 5px solid #4f7ef2;*/
+    border-top: 5px solid #3666e0;
+  border-bottom: 5px solid #3666e0;
+
+  width: 100%;
+  height: 69px;
+}
+
 @media (max-width: 1000px) {
+  body {
+    width: 100vw;
+  }
   section, header, .cerimonia, .ricevimento {
     width: 90%;
     max-width: 800px;
@@ -256,6 +272,9 @@ small {
         <a class="btn" target="_blank" href="https://goo.gl/maps/KLBXCbikyB42"><i class="icon-map" aria-hidden="true"></i>Mappa</a>
       </p>
     </section>
+
+    <div class="separator"></div>
+
     <section>
       <h2>I consigli della sposa</h2>
       <ol>
