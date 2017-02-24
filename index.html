@@ -39,7 +39,7 @@
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
+  margin-right: 1em;
   text-align: center;
   /* opacity: .8; */
 
@@ -97,6 +97,23 @@ header {
 
 section {
   width: 50%;
+  order: 4;
+}
+
+header, .cerimonia, .ricevimento {
+  width: 33%;
+}
+
+header {
+  order: 2
+}
+
+.cerimonia {
+  order: 1;
+}
+
+.ricevimento {
+  order: 3
 }
 
 iframe {
@@ -175,9 +192,13 @@ small {
 }
 
 @media (max-width: 1000px) {
-  section {
+  section, header, .cerimonia, .ricevimento {
     width: 90%;
     max-width: 800px;
+  }
+
+  header {
+    order: 0;
   }
 
   .btn {
@@ -187,18 +208,29 @@ small {
     margin: 1%;
   }
 
+  h1 {
+    font-size: 3em;
+  }
+
+  h1 small {
+    font-size: 0.7em;
+  }
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+    margin-right: 2em;
+ }
 }
 
 </style>
 </head>
 
 <body>
-  <header>
-	  <h1>Laura e Matteo <small>si sposano</small></h1>
-	  <a href="https://www.youtube.com/watch?v=dB2yj4wxxUM"><img src="assets/preview.png"></a>
-  </header>
   <div class="container">
-        <section>
+    <header>
+      <h1>Laura e Matteo <small>si sposano</small></h1>
+      <a href="https://www.youtube.com/watch?v=dB2yj4wxxUM"><img src="assets/preview.png"></a>
+    </header>
+    <section class="cerimonia">
       <h2>Cerimonia</h2>
 
       <p>il
@@ -208,12 +240,12 @@ small {
         <small>Largo di Fontebranda<br>Giardino sotto le mura</small>
       </p>
       <p>
-        <a class="btn" target="_blank" href="https://goo.gl/maps/bJNCb1oxFdK2"><i class="icon-map"></i>&nbsp;&nbsp;&nbsp;Mappa</a>
+        <a class="btn" target="_blank" href="https://goo.gl/maps/bJNCb1oxFdK2"><i class="icon-map"></i>Mappa</a>
         <a class="btn" target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=OTI2dWt0ZnJvbDdsczAzcmk0aDhuY2h2YzAgbWF0dGVvLnN1cHBvQG0&tmsrc=matteo.suppo%40gmail.com">
-        <i class="icon-calendar" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Aggiungi al calendario</a>
+        <i class="icon-calendar" aria-hidden="true"></i>Aggiungi al calendario</a>
       </p>
     </section>
-    <section>
+    <section class="ricevimento">
       <h2>Ricevimento</h2>
 
       <p>il 15/07/2017 alle 19:00<br>
@@ -221,7 +253,7 @@ small {
       <small>Loc. Bibbiano la Taverna, 35<br>
       53034 Colle di Val d'Elsa (Siena)</small></p>
       <p>
-        <a class="btn" target="_blank" href="https://goo.gl/maps/KLBXCbikyB42"><i class="icon-map" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Mappa</a>
+        <a class="btn" target="_blank" href="https://goo.gl/maps/KLBXCbikyB42"><i class="icon-map" aria-hidden="true"></i>Mappa</a>
       </p>
     </section>
     <section>
