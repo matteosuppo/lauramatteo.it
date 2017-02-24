@@ -73,18 +73,30 @@ body {
 	text-align: center;
 	font-family: 'Della Respira', serif;
 	font-size: 2em;
-	background: url('background.jpg');
+	background: url('assets/background.jpg');
   /*background: black;*/
   background-size: contain;
   margin: 0;
 }
 
 header, section {
-  max-width: 800px;
   margin: 0 auto;
-  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255, 255, 255, 1) 60%,rgba(255,255,255,0) 100%);
-  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%, rgba(255, 255, 255, 1) 60%,rgba(255,255,255,0) 100%);
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%, rgba(255, 255, 255, 1) 60%,rgba(255,255,255,0) 100%);
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%, rgba(255, 255, 255, 1) 70%,rgba(255,255,255,0) 100%);
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%, rgba(255, 255, 255, 1) 70%,rgba(255,255,255,0) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%, rgba(255, 255, 255, 1) 70%,rgba(255,255,255,0) 100%);
+}
+
+header {
+  max-width: 800px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+section {
+  width: 50%;
 }
 
 iframe {
@@ -108,19 +120,20 @@ h2 {
 }
 
 p {
-  padding: 4% 0;
+  padding: 4% 8%;
   margin: 0;
 }
 
 ol {
-  margin: 0;
+  margin: 0 0 0 8%;
+  padding: 0 8%;
 }
 
 ol li {
   text-align: left;
   font-size: 0.75em;
   line-height: 1.55em;
-  padding: 2.5% 5%;
+  padding: 2.5% 2.5%;
 }
 
 h1 small {
@@ -160,6 +173,22 @@ small {
   background: #0088ff;
   text-decoration: none;
 }
+
+@media (max-width: 1000px) {
+  section {
+    width: 90%;
+    max-width: 800px;
+  }
+
+  .btn {
+    width: 90%;
+    display: block;
+    padding: 4%;
+    margin: 1%;
+  }
+
+}
+
 </style>
 </head>
 
@@ -168,56 +197,61 @@ small {
 	  <h1>Laura e Matteo <small>si sposano</small></h1>
 	  <a href="https://www.youtube.com/watch?v=dB2yj4wxxUM"><img src="assets/preview.png"></a>
   </header>
-  <section>
-    <h2>Cerimonia</h2>
+  <div class="container">
+        <section>
+      <h2>Cerimonia</h2>
 
-    <p>il
-      <date>15/07/2017</date> alle
-      <time>17:30</time><br>
-      a Monteriggioni<br>
-      <small>Largo di Fontebranda<br>Giardino sotto le mura</small>
-    </p>
-    <p>
-      <a class="btn" target="_blank" href="https://goo.gl/maps/bJNCb1oxFdK2"><i class="icon-map"></i>&nbsp;&nbsp;&nbsp;Mappa</a>
-      <a class="btn" target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=OTI2dWt0ZnJvbDdsczAzcmk0aDhuY2h2YzAgbWF0dGVvLnN1cHBvQG0&tmsrc=matteo.suppo%40gmail.com">
-      <i class="icon-calendar" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Aggiungi al calendario</a>
-    </p>
-  </section>
-  <section>
-    <h2>Ricevimento</h2>
+      <p>il
+        <date>15/07/2017</date> alle
+        <time>17:30</time><br>
+        a Monteriggioni<br>
+        <small>Largo di Fontebranda<br>Giardino sotto le mura</small>
+      </p>
+      <p>
+        <a class="btn" target="_blank" href="https://goo.gl/maps/bJNCb1oxFdK2"><i class="icon-map"></i>&nbsp;&nbsp;&nbsp;Mappa</a>
+        <a class="btn" target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=OTI2dWt0ZnJvbDdsczAzcmk0aDhuY2h2YzAgbWF0dGVvLnN1cHBvQG0&tmsrc=matteo.suppo%40gmail.com">
+        <i class="icon-calendar" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Aggiungi al calendario</a>
+      </p>
+    </section>
+    <section>
+      <h2>Ricevimento</h2>
 
-    <p>il 15/07/2017 alle 19:00<br>
-    alla Taverna di Bibbiano<br>
-    <small>Loc. Bibbiano la Taverna, 35<br>
-    53034 Colle di Val d'Elsa (Siena)</small></p>
-    <p>
-      <a class="btn" target="_blank" href="https://goo.gl/maps/KLBXCbikyB42"><i class="icon-map" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Mappa</a>
-    </p>
+      <p>il 15/07/2017 alle 19:00<br>
+      alla Taverna di Bibbiano<br>
+      <small>Loc. Bibbiano la Taverna, 35<br>
+      53034 Colle di Val d'Elsa (Siena)</small></p>
+      <p>
+        <a class="btn" target="_blank" href="https://goo.gl/maps/KLBXCbikyB42"><i class="icon-map" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Mappa</a>
+      </p>
+    </section>
+    <section>
+      <h2>I consigli della sposa</h2>
+      <ol>
+        <li>E’ Luglio, fa caldo, non svenite.</li>
+        <li>La cerimonia si terrà in uno dei giardini del castello di Monteriggioni, da notare: il Castello di Monteriggioni è l’antica rocca di Monteriggioni, non l’hotel con l’ononimo nome.</li>
+        <li>La cerimonia si svolgerà durante la festa medievale del borgo, quindi ci sarà tanto casino ( gli organizzatori ci hanno parlato di 5 o 6 mila persone, noi speriamo che si sbaglino), preparatevi!</li>
+        <li>L’entrata alla festa necessita di un biglietto, ancora non sappiamo come il comune ci farà entrare, ma abbiate fiducia che prima del matrimonio vi daremo le istruzioni.</li>
+        <li>Il parcheggio è in attorno al castello in un campo adibito a tale scopo. Ripeto un campo!</li>
+        <li>Dal parcheggio al castello ci saranno 300 metri in salita, decidete un po’ voi con che scarpe venire!
+        <li>La cerimonia inizia alle 5.30 e sappiate che saremo in orario, pechè ad una certa ci buttano fuori dal giardino per fare posto ad altri.</li>
+        <li>Appena entrati dalla porta a Monteriggioni proseguite dritto di fronte a voi, superate la piazza della cisterna e dopo pochi passi vedrete un’altra porta:Monteriggioni è già finita! Voi saggiamente girate a sinistra prima della discesa e subito sulla destra troverete l’ingresso del giardino sopraelevato. Se trovate un’altra piazza significa che dovete girarvi a destra e entrare nel giardino.</li>
+        <li>Post cerimonia vi potete godere la festa medievale, sappiate che io e Matteo siamo molto legati a ‘sta festa: è stata un po’ l’inizio del tutto.</li>
+        <li>Se volete comprare qualcosa alla festa si può fare solo con la moneta della festa: ci sono due banchini all’interno delle mura dove potete farvi cambiare gli euri.</li>
+        <li>Dalle 19 potete andare a iniziare a mangiare all’agriturismo; arrivate quando vi pare, noi faremo altrettanto!</li>
+        <li>L’aperitivo è attorno alla piscina, per arrivarci non rotolate, sennò il bagno è assicurato.</li>
+        <li>Per favore se avete intolleranze, allergie o semplicemente se siete schizzinosi: ditelo! Vi faremo mangiare in un tavolo lontano da tutti!No, seriamente avvertiteci. Anche se avete bambini, noi non avendoli non sappiamo cosa mangiano, se mangiano, quando, perchè, dove...cmq ci hanno assicurato che c’è un comodo posto dove parcheggiare le carrozzine cosìcchè possano dormire tutti vicini vicini.</li>
+        <li>Direi che i consigli sono finiti...ah dimenticavo: DIVERTITEVI!</li>
+      </ol>
+    </section>
+    <section>
+      <h2>Viaggio di Nozze</h2>
+      <img src="assets/flag.png">
+      <p class="small">Non siamo ancora certi al 100%, ma ci piacerebbe andare in Nuova Zelanda. Principalmente perchè io (Laura) voglio vedere i pinguini e animali pucciosi e Matteo mi ha assicurato che lì ci sono. Non ho idea perchè Matteo ci voglia andare, forse avrà visto un documentario.</p>
+      <img src="assets/penguin.jpg">
+      <p class="small">Cmq se volete contribuire al nostro viaggio alla scoperta dei Pinguini (sicuramente ne toccherò uno e mi farà schifino) e di non so che altro, potete usare il seguente IBAN come riferimento:</p>
+      <pre>IT 79 A 01030 14208 000000422777</pre>
+      <pre>Intestato a Laura Brandini e Matteo Suppo</pre>
   </section>
-  <section>
-    <h2>I consigli della sposa</h2>
-    <ol>
-      <li>E’ Luglio, fa caldo, non svenite.</li>
-      <li>La cerimonia si terrà in uno dei giardini del castello di Monteriggioni, da notare: il Castello di Monteriggioni è l’antica rocca di Monteriggioni, non l’hotel con l’ononimo nome.</li>
-      <li>La cerimonia si svolgerà durante la festa medievale del borgo, quindi ci sarà tanto casino ( gli organizzatori ci hanno parlato di 5 o 6 mila persone, noi speriamo che si sbaglino), preparatevi!</li>
-      <li>L’entrata alla festa necessita di un biglietto, ancora non sappiamo come il comune ci farà entrare, ma abbiate fiducia che prima del matrimonio vi daremo le istruzioni.</li>
-      <li>Il parcheggio è in attorno al castello in un campo adibito a tale scopo. Ripeto un campo!</li>
-      <li>Dal parcheggio al castello ci saranno 300 metri in salita, decidete un po’ voi con che scarpe venire!
-      <li>La cerimonia inizia alle 5.30 e sappiate che saremo in orario, pechè ad una certa ci buttano fuori dal giardino per fare posto ad altri.</li>
-      <li>Appena entrati dalla porta a Monteriggioni proseguite dritto di fronte a voi, superate la piazza della cisterna e dopo pochi passi vedrete un’altra porta:Monteriggioni è già finita! Voi saggiamente girate a sinistra prima della discesa e subito sulla destra troverete l’ingresso del giardino sopraelevato. Se trovate un’altra piazza significa che dovete girarvi a destra e entrare nel giardino.</li>
-      <li>Post cerimonia vi potete godere la festa medievale, sappiate che io e Matteo siamo molto legati a ‘sta festa: è stata un po’ l’inizio del tutto.</li>
-      <li>Se volete comprare qualcosa alla festa si può fare solo con la moneta della festa: ci sono due banchini all’interno delle mura dove potete farvi cambiare gli euri.</li>
-      <li>Dalle 19 potete andare a iniziare a mangiare all’agriturismo; arrivate quando vi pare, noi faremo altrettanto!</li>
-      <li>L’aperitivo è attorno alla piscina, per arrivarci non rotolate, sennò il bagno è assicurato.</li>
-      <li>Per favore se avete intolleranze, allergie o semplicemente se siete schizzinosi: ditelo! Vi faremo mangiare in un tavolo lontano da tutti!No, seriamente avvertiteci. Anche se avete bambini, noi non avendoli non sappiamo cosa mangiano, se mangiano, quando, perchè, dove...cmq ci hanno assicurato che c’è un comodo posto dove parcheggiare le carrozzine cosìcchè possano dormire tutti vicini vicini.</li>
-      <li>Direi che i consigli sono finiti...ah dimenticavo: DIVERTITEVI!</li>
-    </ol>
-  </section>
-  <section>
-    <h2>Viaggio di Nozze</h2>
-    <p class="small">Non siamo ancora certi al 100%, ma ci piacerebbe andare in Nuova Zelanda. Principalmente perchè io (Laura) voglio vedere i pinguini e animali pucciosi e Matteo mi ha assicurato che lì ci sono. Non ho idea perchè Matteo ci voglia andare, forse avrà visto un documentario.</p>
-    <p class="small">Cmq se volete contribuire al nostro viaggio alla scoperta dei Pinguini (sicuramente ne toccherò uno e mi farà schifino) e di non so che altro, potete usare il seguente IBAN come riferimento:</p>
-</section>
-
+</div>
 </body>
 </html>
